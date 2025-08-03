@@ -1,0 +1,38 @@
+#include<stdio.h>
+void acceptArray(int arr[][3], int row, int col);
+void printArray(int arr[][3], int row, int col);
+
+
+int main(void)
+{
+	int arr[3][3];
+	acceptArray(arr,3,3);
+	printArray(arr, 3, 3);
+	return 0;
+}
+
+void acceptArray(int arr[][3], int row, int col)
+{
+	printf("Enter Array Element:");
+	for(int i=0; i<row ; i++)
+	{
+		for(int j=0; j<col; j++)
+		{
+			printf("arr[%d][%d] = ", i, j);
+			scanf("%d", &arr[i][j]);
+		}
+    	}
+}
+void printArray(int arr[][3], int row, int col)
+{
+	printf("2D array : \n");
+	for(int i=0; i < row; i++)
+	{
+		for(int j=0; j<col ; j++)
+		{
+			printf("%-4d",arr[i][j]);
+		}
+		printf("\n");
+	}
+
+
